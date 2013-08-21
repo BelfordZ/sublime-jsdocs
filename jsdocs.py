@@ -99,7 +99,7 @@ class JsdocsCommand(sublime_plugin.TextCommand):
         self.trailingString = escape(re.sub('\\s*\\*\\/\\s*$', '', self.trailingString))
 
         self.indentSpaces = " " * max(0, self.settings.get("jsdocs_indentation_spaces", 1))
-        self.prefix = "*"
+        self.prefix = self.settings.get("jsdocs_inner_block_prefix", "*")
 
         settingsAlignTags = self.settings.get("jsdocs_align_tags", 'deep')
         self.deepAlignTags = settingsAlignTags == 'deep'
