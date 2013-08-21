@@ -103,5 +103,15 @@
 
   // This property affects the default tag added to `var` declarations in Javascript/Coffeescript. If `false`, the
   // default is used ("var"), otherwise it can be set to any String, eg: "property"
-  "jsdocs_override_js_var": false
+  "jsdocs_override_js_var": false,
+  
+  // If set, when creating comment blocks, docblockr will use the specified line prefix
+  // below. Change this if using YUIdoc, where you must have comments of the following
+  // form:
+  //   ###*
+  //    # This is a comment block
+  //   ###
+  //
+  // defaults to "*"
+  "jsdocs_inner_block_prefix": "*",
 }
